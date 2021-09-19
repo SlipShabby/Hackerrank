@@ -28,3 +28,18 @@ for _ in range(n):
 query_name = input()
 
 print(f"{sum(student_marks[query_name])/len(student_marks[query_name]):.2f}")
+
+# lists
+n = int(input())
+l = []
+for _ in range(n):
+    line = input().split()
+    if line[0] == 'print':
+        print(l)
+    else:
+        getattr(l,line[0])(*(map(int, line[1:])))
+
+
+# tuples
+n = int(raw_input())
+integer_list = map(int, raw_input().split())
