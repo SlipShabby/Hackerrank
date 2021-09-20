@@ -69,6 +69,84 @@ def wrap(string, w):
     return s
 
 
+# designer door mat
+n, m = map(int,input().split()) 
+
+def design(n,m):
+    pattern = ".|."
+    message = "WELCOME"
+    p = [(pattern*(2*i+1)).center(m,"-") for i in range(n//2)]
+    # print(p)
+    print('\n'.join(p + [message.center(m, '-')] + p[::-1]))
+    # for i in range(0,n-1,2):
+    #     print((".|."*(i+1)).center(m,"-"))
+    # print(message.center(m, "-"))
+    # for i in range(n-2,0,-2):
+    #     print((".|."*i).center(m,"-"))
+            
+design(n,m)
+
+# string formatting
+def print_formatted(number):
+    for i in range(1,n+1):
+        print('{0:{w}d} {0:{w}o} {0:{w}X} {0:{w}b}'.format(i, w= len("{0:b}".format(n))))
+
+# alphabet ragnoli
+import string
+
+def print_rangoli(size):
+    # your code goes here
+    abc =string.ascii_lowercase
+    w = n*4-3
+    
+    for i in range(n-1,0,-1):
+        s = '-'.join(abc[i:n])
+        print((s[::-1]+s[1::]).center(w,'-'))
+    for i in range(0,n):
+        s = '-'.join(abc[i:n])
+        print((s[::-1]+s[1:]).center(w,'-'))
+
+# capitalize
+def solve(string):
+    ret = ""
+    for i in string.split(' '):
+        ret += i.capitalize() + " "
+    return ret[:-1]
+
+# Minion game
+from itertools import permutations
+
+def minion_game(string):
+    # your code goes here
+    vowels= 'AEIOU'
+    l = len(string)
+    n_subs = int(l * (l + 1) / 2)
+    k = sum(l - i for i in range(l) if string[i] in vowels)   
+    s = n_subs - k
+
+    if s > k:
+        print(f"Stuart {s}")
+    elif s < k:
+        print(f"Kevin {k}")
+    else:
+        print("Draw")
+    
+    
+# merge the tools
+
+def merge_the_tools(string, k):
+    # your code goes here
+    comb = [string[i:i+k] for i in range(0,len(string),k)]
+
+    for i in range(len(comb)):
+        print(''.join(dict.fromkeys(list(comb[i]))))
+    
+
+
+
+
+
+
 
 
 
