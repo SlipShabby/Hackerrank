@@ -13,4 +13,37 @@ arr = input().split()
 a,b = (set(input().split()) for i in range(2))
 print(sum((i in a) - (i in b) for i in arr))
 
-# 
+# symmetric difference
+
+a,b = [set(input().split(' ')) for i in range(4)][1::2]
+# d = list(b.difference(a).union(a.difference(b)))
+# x = sorted(d,key = int)
+print ('\n'.join(sorted(a^b, key=int)))
+# for c in x:
+    # print(c)
+
+# add
+
+# a = set()
+# for i in range(int(input())):
+#     a.add((input()))
+# print(len(a))
+
+print(len({input() for i in range(int(input()))}))
+
+# discard, remove, pop
+
+n = int(input())
+s = set(map(int, input().split()))
+# print(s)
+
+for i in range(int(input())):
+    args, *kwargs = map(str,input().split())
+    getattr(s,args)(*(int(x) for x in kwargs))
+
+print (sum(s))
+
+# union
+
+a, b = [set(input().split()) for i in range(4)][1::2]
+print(len(a.union(b)))
