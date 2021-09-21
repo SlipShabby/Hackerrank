@@ -75,3 +75,30 @@ for i in range(n):
     getattr(s, command)(set(input().split())) 
     
 print(sum(map(int, s)))
+
+# the captain`s room
+
+s = sorted([input().split() for i in range(2)][1])
+# a =set(s[0::2])
+# b = set(s[1::2])
+# print(a.symmetric_difference(b))
+print((set(s[0::2]) ^ set(s[1::2])).pop())
+
+# check subset
+
+for i in range(int(input())):
+    a,b = [set(input().split()) for i in range(4)][1::2]
+
+    print(a == a.intersection(b))
+
+# check strickt superset
+
+a = set(input().split())
+# n = int(input())
+# l = []
+# for i in range(n):
+#     c = a.issuperset(set(input().split()))
+#     l.append(c)
+# print(all(l))
+
+print(all([a.issuperset(set(input().split())) for i in range(int(input()))]))
