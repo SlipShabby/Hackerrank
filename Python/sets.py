@@ -47,3 +47,14 @@ print (sum(s))
 
 a, b = [set(input().split()) for i in range(4)][1::2]
 print(len(a.union(b)))
+
+# intersection
+
+a, b = list((set(input().split()) for i in range(4)))[1::2]
+print(len(a.intersection(b)))
+
+# difference
+
+a, b = list(set(input().split()) for i in range(4))[1::2]
+print(len(a.difference(b)))
+
