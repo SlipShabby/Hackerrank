@@ -32,7 +32,7 @@ print(a//b, a%b, a.__divmod__(b), sep='\n')
 a,b,c = [int(input()) for i in range(3)]
 print(pow(a,b), pow(a,b,c), sep = '\n')
 
-# integers come in all size
+# integers come in all sizes
 
 a,b,c,d = [int(input()) for i in range(4)]
 print(pow(a,b) + pow(c,d))
