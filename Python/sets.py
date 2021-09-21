@@ -62,3 +62,16 @@ print(len(a.difference(b)))
 
 a, b = list(set(input().split())for i in range(4))[1::2]
 print(len(a.symmetric_difference(b)))
+
+# mutations
+
+int(input())
+s = set(input().split())
+n =int(input())
+
+for i in range(n):
+    command, *args = input().split()
+    # print(command, *args)
+    getattr(s, command)(set(input().split())) 
+    
+print(sum(map(int, s)))
