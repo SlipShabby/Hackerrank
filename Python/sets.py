@@ -58,3 +58,7 @@ print(len(a.intersection(b)))
 a, b = list(set(input().split()) for i in range(4))[1::2]
 print(len(a.difference(b)))
 
+# symmetric difference
+
+a, b = list(set(input().split())for i in range(4))[1::2]
+print(len(a.symmetric_difference(b)))
