@@ -86,3 +86,31 @@ for i in range(int(input())):
     products[p] += int(price)
     
 [print(k,v) for k,v in products.items()]
+
+# deque
+
+from collections import deque
+
+d= deque()
+
+for i in range(int(input())):
+    cmd = input().split()
+    if len(cmd) == 1:
+        getattr(d, cmd[0])()
+    else:
+        getattr(d,cmd[0])(cmd[1])
+[print(x, end=' ') for x in d]
+
+# word order
+
+from collections import OrderedDict
+
+d = OrderedDict()
+
+for i in range(int(input())):
+    w = input()
+    d.setdefault(w, 0)
+    d[w] +=1
+l =[(v) for x,v in d.items()]
+print(len(l))
+print(*l)  
