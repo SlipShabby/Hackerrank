@@ -114,3 +114,30 @@ for i in range(int(input())):
 l =[(v) for x,v in d.items()]
 print(len(l))
 print(*l)  
+
+# company logo
+
+from collections import Counter
+
+if __name__ == '__main__':
+    s = input()
+    [print(a,b) for a,b in (Counter(sorted(s)).most_common(3))]
+
+
+# piling up
+
+from collections import deque
+
+for i in range(int(input())):  
+    i, queue =input(), deque(map(int, input().split()))
+    # print(queue)
+    for cube in reversed(sorted(queue)):
+        if queue[-1] == cube: 
+            queue.pop()
+        elif queue[0] == cube: 
+            queue.popleft()
+        else:
+            print('No')
+            break
+    else: 
+        print('Yes')
