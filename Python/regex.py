@@ -59,3 +59,25 @@ else:
 # Validating Roman Numerals
 
 regex_pattern = r"^M{0,3}(?:C[MD]|D?C{0,3})(?:X[CL]|L?X{0,3})(?:I[XV]|V?I{0,3})$"
+
+# validating phone numbers
+
+for i in range(int(input())):
+    if re.match(r'[789]\d{9}$',input()):   
+        print('YES')  
+    else:  
+        print('NO')  
+
+# Validating and Parsing Email Addresses
+
+import email.utils
+
+for i in range(int(input())):
+    
+    name, mail = map(str,email.utils.parseaddr(input()))
+    
+    validEmail = re.search(r'^[a-zA-Z]+[a-zA-Z0-9_.-]+[@][a-zA-Z]+[.][a-zA-Z]{1,3}$', mail)
+   
+    if validEmail:
+        print(email.utils.formataddr((name, mail)))
+
