@@ -215,3 +215,32 @@ for i in range(int(input())):
 regex_integer_in_range = r"^[1-9][\d]{5}$"	# Do not delete 'r'.
 regex_alternating_repetitive_digit_pair = r"(\d)(?=.\1)"	# Do not delete 'r'.
 
+# MATRIX script
+
+import math
+import os
+import random
+import re
+import sys
+
+
+
+
+first_multiple_input = input().rstrip().split()
+
+n = int(first_multiple_input[0])
+
+m = int(first_multiple_input[1])
+
+matrix = []
+m = ''
+
+for _ in range(n):
+    matrix_item = input()
+    matrix.append(matrix_item)
+
+for z in zip(*matrix):
+    m += "".join(z)
+
+print(re.sub(r"(?<=\w)([^\w]+)(?=\w)", " ", m))
+
