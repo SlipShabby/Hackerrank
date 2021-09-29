@@ -172,3 +172,25 @@ parser = MyHTMLParser()
 parser.feed(html)
 parser.close()
 
+# validating uid
+
+import re
+
+d = {
+    'isalpha': lambda uid: re.match( r'.*[A-Z].*[A-Z].*', uid),
+    'isnum': lambda uid: re.match( r'.*[0-9].*[0-9].*[0-9].*', uid),
+    'isalpha_num': lambda uid: re.match( r'[A-Za-z0-9]{10}', uid),
+    'unique': lambda uid: not re.match( r'.*(.).*\1.*', uid)
+    }
+
+for i in range(int(input())):
+    uid = input()
+    if all(d[i](uid) for i in d.keys()):
+        print('Valid')
+    else:
+        print('Invalid')
+        
+        
+# import re
+# [print('Valid') if re.match(r'^(?!.*(.).*\1)(?=(?:.*[A-Z]){2,})(?=(?:.*\d){3,})[a-zA-Z0-9]{10}$', input()) else print('Invalid') for _ in range(int(input()))]
+
