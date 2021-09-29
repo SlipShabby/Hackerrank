@@ -194,3 +194,19 @@ for i in range(int(input())):
 # import re
 # [print('Valid') if re.match(r'^(?!.*(.).*\1)(?=(?:.*[A-Z]){2,})(?=(?:.*\d){3,})[a-zA-Z0-9]{10}$', input()) else print('Invalid') for _ in range(int(input()))]
 
+# validating credit card numbers
+
+import re
+
+checks = {
+    'start': lambda card: re.match(r'[456]\d{3}(-?\d{4}){3}$', card),
+    'repeat': lambda card: re.match(r'((\d)-?(?!(-?\2){3})){16}', card)
+    }
+
+for i in range(int(input())):
+    card = input()
+    if all(checks[i](card) for i in checks.keys()):
+        print('Valid')
+    else:
+        print('Invalid')
+
