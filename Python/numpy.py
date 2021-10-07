@@ -25,3 +25,12 @@ n,m,p = map(int,input().split())
 ln = numpy.array([input().split() for i in range(n)], int)
 lm = numpy.array([input().split() for i in range(m)], int)
 print(numpy.concatenate((ln,lm), axis =0))
+
+# ones and zeros
+
+n = numpy.array(input().split(), int)
+z = numpy.zeros((n),dtype = numpy.int)
+o = numpy.ones(n, dtype=numpy.int)
+print(z)
+print(o)
+
