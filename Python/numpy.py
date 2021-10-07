@@ -34,3 +34,12 @@ o = numpy.ones(n, dtype=numpy.int)
 print(z)
 print(o)
 
+# eye and identity
+
+numpy.set_printoptions(legacy = '1.13')
+n , m = map(int,input().split())
+ 
+arr = numpy.eye(n, m, k = 0)
+print(arr)
+
+
