@@ -19,3 +19,9 @@ arr = numpy.transpose(l)
 print(arr)
 print(l.flatten())
 
+# concantenate 
+
+n,m,p = map(int,input().split())
+ln = numpy.array([input().split() for i in range(n)], int)
+lm = numpy.array([input().split() for i in range(m)], int)
+print(numpy.concatenate((ln,lm), axis =0))
