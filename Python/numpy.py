@@ -54,3 +54,9 @@ numpy.set_printoptions(legacy = '1.13')
 arr = numpy.array(input().split(), float)
 
 print(numpy.floor(arr), numpy.ceil(arr), numpy.rint(arr),sep='\n')
+
+# sum and prod 
+
+n, m = map(int,input().split())
+arr = numpy.array([input().split() for _ in range(n)],int)
+print(numpy.prod(numpy.sum(arr,axis=0), axis = 0))
