@@ -48,4 +48,9 @@ n, m = map(int, input().split())
 a, b = (numpy.array([input().split() for _ in range(n)], dtype=int) for _ in range(2))
 print(a+b, a-b, a*b, a//b, a%b, a**b, sep = '\n')
 
-# 
+# floor, ceil, rint
+
+numpy.set_printoptions(legacy = '1.13')
+arr = numpy.array(input().split(), float)
+
+print(numpy.floor(arr), numpy.ceil(arr), numpy.rint(arr),sep='\n')
