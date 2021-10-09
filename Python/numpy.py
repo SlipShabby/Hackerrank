@@ -91,5 +91,9 @@ a = numpy.array([input().split() for i in range(n)],int)
 b = numpy.array([input().split() for i in range(n)],int)
 print(numpy.dot(a,b))
 
+# inner and outer
+
+a, b = numpy.array([input().split() for i in range(2)],int)
+print(numpy.inner(a,b), numpy.outer(a,b), sep = '\n')
 
 
