@@ -84,6 +84,7 @@ n, m = map(int, input().split())
 arr = numpy.array([input().split() for i in range(n)], float)
 print(numpy.mean(arr, axis = 1), numpy.var(arr,axis = 0), round(numpy.std(arr),11), sep='\n')
 
+
 # dot and cross
 
 n = int(input())
@@ -91,9 +92,18 @@ a = numpy.array([input().split() for i in range(n)],int)
 b = numpy.array([input().split() for i in range(n)],int)
 print(numpy.dot(a,b))
 
+
 # inner and outer
 
 a, b = numpy.array([input().split() for i in range(2)],int)
 print(numpy.inner(a,b), numpy.outer(a,b), sep = '\n')
+
+
+# polynomials
+
+arr =numpy.array(input().split(),float)
+x = int(input())
+print(numpy.polyval(arr,x))
+
 
 
