@@ -106,4 +106,9 @@ x = int(input())
 print(numpy.polyval(arr,x))
 
 
+# linear algebra
+
+n = int(input())
+a= numpy.array([input().split() for i in range(n)],float)
+print(round(numpy.linalg.det(a),2))
 
